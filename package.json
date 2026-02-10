@@ -1,0 +1,12 @@
+{
+  "name": "user-list-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:types": "pnpm --filter @repo/types dev",
+    "build:types": "pnpm --filter @repo/types build",
+    "build": "pnpm build:types && pnpm --filter frontend build && pnpm --filter backend build"
+  }
+}
